@@ -1,0 +1,35 @@
+body{
+    padding:0;
+    margin:0;
+    background-color:#455a64;
+}
+#container{
+    height:600px;
+}
+#main{
+    background-color:#37474f;
+    margin: 0 auto;
+    width:700px;
+    height:600px;
+}
+h1{
+    text-align:center;
+    margin:100px 0;
+}
+#startingMenu{
+    position:absolute;
+    width:700px;
+    background-color:#37474f;
+    height:100%;
+}
+#begin{
+    padding:5px;
+    width:350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#playerMove{
+    text-align:center;
+    margin: 0;
+}
