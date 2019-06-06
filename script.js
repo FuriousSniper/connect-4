@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("begin").addEventListener("click", function () {
         document.getElementById("startingMenu").style.display = "none"
     })
-    document.getElementById("playerMove").innerHTML = "Ruch gracza czerwonego"
+    document.getElementById("playerMove").innerHTML = "Red player moves"
     document.getElementById("playerMove").style.color = "red"
     mapInit()
     animate()
@@ -161,11 +161,11 @@ canvas.addEventListener("click", function (e) {
                 player = true
 
             if (!player) {
-                document.getElementById("playerMove").innerHTML = "Ruch gracza żółtego"
+                document.getElementById("playerMove").innerHTML = "Yellow player moves"
                 document.getElementById("playerMove").style.color = "yellow"
             }
             else {
-                document.getElementById("playerMove").innerHTML = "Ruch gracza czerwonego"
+                document.getElementById("playerMove").innerHTML = "Red player moves"
                 document.getElementById("playerMove").style.color = "red"
             }
         }
