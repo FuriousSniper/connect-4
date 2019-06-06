@@ -5,6 +5,7 @@ var tab = []
 var player = true
 var map = new Image()
 var winner = null
+var mouseOverColumn
 map.onload = function () {
     ctx.drawImage(map, 0, 100)
 }
@@ -42,7 +43,19 @@ function drawCircle(col, row, player) {
         tab[row][col] = "Y"
     }
     ctx.fill();
-    // console.log(tab)
+}
+function drawHoverCircle(col, player) {
+    if (checkColumn(col)!="false") {
+        ctx.beginPath();
+        ctx.arc(((col + 1) * 100) - 50, ((0) * 100) + 50, 50, 0, 2 * Math.PI);
+        if (player) {
+            ctx.fillStyle = "red"
+        }
+        else {
+            ctx.fillStyle = "yellow"
+        }
+        ctx.fill();
+    }
 }
 function checkColumn(column) {
     var canPlace = false
@@ -170,5 +183,12 @@ canvas.addEventListener("click", function (e) {
             }
         }
         checkMap()
+    }
+})
+canvas.addEventListener("mousemove", function (e) {
+    if (!finished) {
+        var column = 100
+        mouseOverColumn = Math.floor(e.offsetX / column)
+        console.log(Math.floor(e.offsetX / column))
     }
 })
