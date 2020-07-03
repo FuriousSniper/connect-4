@@ -1,1 +1,1 @@
-This is a simple "Connect 4" game.
+"Connect 4" game recreated in HTML and JavaScript.
